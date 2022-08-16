@@ -9,9 +9,9 @@ const janeDoe = {
 }
 
 
-const objectsMerge = (johnDoe,janeDoe) => {
-
-
+const objectsMerge = (...objects) => {
+    const arrayOfObjects = {...objects};
+    return arrayOfObjects;
 }
 
 

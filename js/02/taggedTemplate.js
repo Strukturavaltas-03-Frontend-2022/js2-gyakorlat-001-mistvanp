@@ -5,3 +5,11 @@
 // - Például ebből, hogy `James`, ez legyen: `<strong>James</strong>`.
 // - A függvény neve `taggedTemplate` legyen!
 // - Összefoglalva: a kapott String-eket kell HTML-elemekké (tagekké) alakítani.
+const taggedTemplate = (texts, values) => {
+    texts.map(
+        (text, index) => `${text && text !== ' ' ? `<em>${text}</em>` : ''}${values[index] ? `<strong>${values[index]}</strong>` : ''}`
+    ).join('');
+}
+
+
+export default taggedTemplate;
